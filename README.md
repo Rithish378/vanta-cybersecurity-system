@@ -1,38 +1,30 @@
-# VANTA – AI-Driven Cybersecurity System
+# 🛡️ VANTA - DNS Security Monitoring System
 
-VANTA is a real-time cyber-physical security system designed to detect, analyze, and prevent unauthorized access and malicious activity across local networks.
+## 🚀 Overview
+VANTA is a cybersecurity monitoring system built using Pi-hole and Python that analyzes DNS traffic, detects anomalies, generates dashboards, and sends real-time alerts via Telegram.
 
-# Features
+## 🔥 Features
+- 📊 Real-time DNS analytics
+- 🤖 Anomaly detection
+- 🌐 Live web dashboard
+- 📩 Telegram alerts
+- ⏱️ Cron-based automation
 
-- DNS-level threat blocking using Pi-hole  
-- Real-time device detection (100% accuracy via MAC tracking)  
-- AI-inspired threat scoring system  
-- Instant Telegram alert system (<2 sec latency)  
-- Secure remote monitoring using Tailscale VPN  
-- 24/7 automated monitoring using Linux services  
+## 🧠 Architecture
+User Traffic → Pi-hole → SQLite DB → Python → Dashboard + Alerts
 
-#Performance Metrics
+## 🛠️ Tech Stack
+- Python
+- Flask
+- Pi-hole
+- SQLite
+- Matplotlib
 
-- 10,000+ DNS queries processed  
-- 7,000+ threats blocked (67.6%)  
-- 81K+ domain blocklists integrated  
-- <30 sec detection time  
-- 100% detection of new devices  
+## ▶️ Setup
+1. Install dependencies
+2. Configure Pi-hole
+3. Update alert.py with bot token
+4. Run scripts
 
-#Tech Stack
-
-- Python  
-- Raspberry Pi  
-- Linux  
-- Pi-hole  
-- ARP Scan  
-- Telegram Bot API  
-- Tailscale VPN  
-
-
-# Installation
-
-```bash
-git clone https://github.com/your-username/vanta-cybersecurity-system.git
-cd vanta-cybersecurity-system
-bash setup.sh
+## 📸 Output
+(Add screenshots here)
