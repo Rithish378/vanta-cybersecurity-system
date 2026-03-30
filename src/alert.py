@@ -1,10 +1,17 @@
 import requests
-import sys
 
-TOKEN = "YOUR_TOKEN"
+TOKEN = "YOUR_BOT_TOKEN"
 CHAT_ID = "YOUR_CHAT_ID"
 
-msg = " ".join(sys.argv[1:]) if len(sys.argv) > 1 else "VANTA Alert"
+def send_message(text):
+    url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
+    requests.post(url, data={"chat_id": CHAT_ID, "text": text})
 
-url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
-requests.post(url, data={"chat_id": CHAT_ID, "text": msg})
+def send_photo(photo_path, caption=""):
+    url = f"https://api.telegram.org/bot{TOKEN}/sendPhoto"
+    with open(photo_path, "rb") as photo:
+        requests.post(
+            url,
+            data={"chat_id": CHAT_ID, "caption": caption},
+            files={"photo": photo}
+        )
